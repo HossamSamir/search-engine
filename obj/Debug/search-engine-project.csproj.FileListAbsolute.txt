@@ -1,0 +1,6 @@
+M:\Github\search-engine-project\search-engine-project\bin\Debug\search-engine-project.exe.config
+M:\Github\search-engine-project\search-engine-project\obj\Debug\search-engine-project.csprojResolveAssemblyReference.cache
+M:\Github\search-engine-project\search-engine-project\bin\Debug\search-engine-project.exe
+M:\Github\search-engine-project\search-engine-project\bin\Debug\search-engine-project.pdb
+M:\Github\search-engine-project\search-engine-project\obj\Debug\search-engine-project.exe
+M:\Github\search-engine-project\search-engine-project\obj\Debug\search-engine-project.pdb
