@@ -27,7 +27,8 @@ namespace search_engine_project
             
 
 
-            Console.WriteLine("showing " + 8 + "results for `" + query + "`");
+            Console.WriteLine("showing " + 8 + " results for `" + query + "`");
+            Console.WriteLine("----------------------------------");
         }
         public void print()
         {
