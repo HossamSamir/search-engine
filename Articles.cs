@@ -25,6 +25,7 @@ namespace search_engine_project
         public void search(string query) {
             Console.WriteLine("showing " + 8 + " results for `" + query + "`");
             Console.WriteLine("----------------------------------");
+            Console.WriteLine();
             if (Head != null)
                 Head.search(query);
         }

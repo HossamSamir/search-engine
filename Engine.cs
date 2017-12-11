@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace search_engine_project
 {
     class Engine
     {
-        public Engine(string query) {
-            Articles myarticles = new Articles();
-            myarticles.AddToEnd("Donald J. Trump isn't following Colin Kaepernick and Stephen Curry for being dark. He's following them for slighting America. Tail me on Twitter", "Donald");
-            myarticles.AddToEnd("title2", "tag2");
-            //myarticles.print();
-            myarticles.search(query);
+        Articles Data = new Articles();
+        public Engine(string raw_data) {
+            string RAW_DATA = File.ReadAllText(@"M:\Github\search-engine\" + raw_data, Encoding.UTF8);
+            string[] RAW_ARTICLE = RAW_DATA.Split('●');
+            foreach (var item in RAW_ARTICLE)
+            {
+                string[] title = item.Split(',');
+                Data.AddToEnd(title[0], title[1]);
+            }
+        }
+
+        public void Search(string query) {
+            Data.search(query);
         }
 
     }

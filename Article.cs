@@ -37,9 +37,8 @@ namespace search_engine_project
         }
         public void search(string query)
         {
-            Console.WriteLine();
             if(keyword.ToLower().Contains(query.ToLower()) || title.ToLower().Contains(query.ToLower())) {
-                Console.WriteLine(title);
+                Console.WriteLine( "> " + title);
                 Console.WriteLine();
             }
             if (next != null)
