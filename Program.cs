@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace search_engine_project
 {
@@ -12,9 +13,17 @@ namespace search_engine_project
         {
             //Engine Google = new Engine("Donald");
             Articles Data = new Articles();
-            Data.AddToEnd("How many pyramids does it take to reach her head?", "Egypt");
-            Data.AddToEnd("USA TODAY investigations underscore how potential conflicts make it look as if the Oval Office is for sale: Our view USA TODAY investigations show how potential conflicts make it looks as if the Oval Office is for sale: Our view There have always been ways to…", "wrong tag");
-            Data.search("UsA");
+            //Data.search("UsA");
+
+            string RAW_DATA = File.ReadAllText(@"M:\Github\search-engine\raw_data.txt", Encoding.UTF8);
+            string[] RAW_ARTICLE = RAW_DATA.Split('.');
+            foreach (var item in RAW_ARTICLE)
+            {
+                string[] title = item.Split(',');
+                Data.AddToEnd(title[0], title[1]);
+            }
+            Data.print();
+
         }
     }
 }
