@@ -23,17 +23,16 @@ namespace search_engine_project
         }
         // a method to seacrh for articles using a string `query` and should prints the seacrh results
         public void search(string query) {
-            // Code to be excuted..
-            
-
-
             Console.WriteLine("showing " + 8 + " results for `" + query + "`");
             Console.WriteLine("----------------------------------");
+            if (Head != null)
+                Head.search(query);
         }
         public void print()
         {
             if (Head != null)
                 Head.print();
         }
+       
     }
 }

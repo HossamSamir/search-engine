@@ -35,5 +35,15 @@ namespace search_engine_project
             if (next != null)
                 next.print();
         }
+        public void search(string query)
+        {
+            Console.WriteLine();
+            if(keyword.ToLower().Contains(query.ToLower()) || title.ToLower().Contains(query.ToLower())) {
+                Console.WriteLine(title);
+                Console.WriteLine();
+            }
+            if (next != null)
+                next.search(query);
+        }
     }
 }
