@@ -13,7 +13,6 @@ namespace search_engine_project
         {
             Engine Google = new Engine("raw_data.txt");
             Google.Search("machine learning");
-            Process.Start("http://www.google.com");
         }
     }
 }
